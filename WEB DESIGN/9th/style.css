@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+.heading{
+    font-size: 9rem;
+}
+
+.par{
+    display: flex;
+    height: 80vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form{
+    font-size: 4rem;
+    border: 2px solid black;
+    
+}
+
+label{
+    font-size: 4rem;
+    
+}
+
+
+
+

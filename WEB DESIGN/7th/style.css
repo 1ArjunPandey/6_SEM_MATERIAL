@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    background-color: rgb(234, 234, 243);
+}
+
+.heading{
+    font-size: 9rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.father{
+
+    display: flex;
+    justify-content: center;
+}
+.parent{
+    /* border: 2px solid black; */
+    
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: wrap;
+
+    /* justify-content: center; */
+    height: 120vh;
+    width: 80vw;
+}
+
+.child{
+    border: 2px solid rgb(0, 0, 0);
+    margin: 5rem 5rem;
+    height: 30rem;
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    width: 30rem;
+    box-shadow: 10px 10px 15px 2px rgb(97, 94, 94);
+}
