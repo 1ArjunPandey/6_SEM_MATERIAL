@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card Information</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <h2 class="heading">Credit Card Information</h2>
 
-    <form action="#" method="post" onsubmit="return validateCreditCard()">
+    <form>
 
         <label>
             <input type="radio" name="creditCardType" value="visa">
@@ -34,7 +36,8 @@
 
         <br>
 
-        <input type="submit" value="Submit">
+        <button id="subb" onclick="validateCreditCard()">Submit here</button>
+
 
     </form>
 
@@ -43,40 +46,46 @@
             var creditCardTypes = document.getElementsByName('creditCardType');
             var cardType;
 
-            creditCardTypes.forEach(function (radio) {
-                if (radio.checked) {
-                    cardType = radio;
+            for (var i = 0; i < creditCardTypes.length; i++) {
+                if (creditCardTypes[i].checked) {
+                    cardType = creditCardTypes[i];
+                    break;
                 }
-            });
+            }
 
             var cardNumber = document.getElementById('creditCardNumber').value.trim();
 
             if (!cardType) {
                 window.alert('Please select a credit card type.');
-                return false;
+                // return false;
+                return;
             }
 
             if (cardType.value === 'visa') {
                 if ((cardNumber.length === 13 || cardNumber.length === 16) && cardNumber.startsWith('4')) {
                     window.alert('Credit card information is valid!');
-                    return true;
+                    // return true;
+                    return;
                 }
             } else if (cardType.value === 'mastercard') {
                 if (cardNumber.length === 16 && parseInt(cardNumber.substring(0, 2)) >= 51 && parseInt(cardNumber.substring(0, 2)) <= 55) {
                     window.alert('Credit card information is valid!');
-                    return true;
+                    // return true;
+                    return;
                 }
             } else if (cardType.value === 'amex') {
                 if (cardNumber.length === 15 && (cardNumber.startsWith('34') || cardNumber.startsWith('37'))) {
                     window.alert('Credit card information is valid!');
-                    return true;
+                    // return true;
+                    return;
                 }
             }
 
             window.alert('Invalid ' + cardType.value.toUpperCase() + ' card number.');
-            return false;
+
         }
     </script>
 
 </body>
+
 </html>
