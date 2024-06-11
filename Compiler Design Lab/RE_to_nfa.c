@@ -67,3 +67,6 @@ int main()
 	printf("\n_\n");
 	return 0;
 }
+
+
+// (use input as ------>  (a|b)*

@@ -1,0 +1,13 @@
+Topics for software engineering practical:
+1. Srs document
+ 
+	Ye imp ha
+	a Railway
+	b Library
+	c student
+
+2. Dfd diagram 
+3. Use case diagram 
+4. Er diagram
+
+
